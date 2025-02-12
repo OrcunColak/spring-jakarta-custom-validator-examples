@@ -10,6 +10,9 @@ public class IPAddressValidator implements ConstraintValidator<ValidIPAddress, S
 
     @Override
     public boolean isValid(String ipAddress, ConstraintValidatorContext constraintValidatorContext) {
+        if (ipAddress == null) {
+            return false;
+        }
         // return VALIDATOR.isValidInet4Address(ipAddress);
         return VALIDATOR.isValid(ipAddress);
     }
