@@ -6,7 +6,7 @@ import org.apache.commons.validator.routines.InetAddressValidator;
 
 public class IPAddressValidator implements ConstraintValidator<ValidIPAddress, String> {
 
-    public static final InetAddressValidator VALIDATOR = new InetAddressValidator();
+    public static final InetAddressValidator VALIDATOR = InetAddressValidator.getInstance();
 
     @Override
     public boolean isValid(String ipAddress, ConstraintValidatorContext constraintValidatorContext) {
